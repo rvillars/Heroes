@@ -9,7 +9,7 @@ public class Application {
 
         // Application context using annotations for DI - more magic, less control
         AnnotationConfigApplicationContext annotatedContext = new AnnotationConfigApplicationContext();
-        annotatedContext.scan("ch.bfh.swos.heroes.service.impl");
+        annotatedContext.scan("ch.bfh.swos.camp.service.impl");
         annotatedContext.refresh();
 
         PartyService partyServiceAnnotaded = annotatedContext.getBean(PartyService.class);
