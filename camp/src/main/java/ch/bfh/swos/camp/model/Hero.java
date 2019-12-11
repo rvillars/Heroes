@@ -11,7 +11,7 @@ public class Hero {
     private String name;
     private int atk;
     private int def;
-    private int hp;
+    private double hp;
 
     public String getId() {
         return id;
@@ -45,11 +45,11 @@ public class Hero {
         this.def = def;
     }
 
-    public int getHp() {
+    public double getHp() {
         return hp;
     }
 
-    public void setHp(int hp) {
+    public void setHp(double hp) {
         this.hp = hp;
     }
 }
