@@ -6,6 +6,7 @@ import ch.bfh.swos.camp.repository.HeroRepository;
 import ch.bfh.swos.camp.service.PartyService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class DefaultPartyService implements PartyService {
 
         List<Hero> allHeroes = heroRepository.findAll();
         Collections.shuffle(allHeroes);
-        List<Hero> randomHeroes = allHeroes.subList(0,4);
+        List<Hero> randomHeroes = new ArrayList<>(allHeroes.subList(0,4));
 
         System.out.println("Adding heroes to party "+name);
         party.setMembers(randomHeroes);
