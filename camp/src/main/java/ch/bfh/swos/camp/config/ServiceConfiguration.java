@@ -36,8 +36,8 @@ public class ServiceConfiguration {
     }
 
     @Bean
-    public MongoTemplate mongoTemplate() {
-        return new MongoTemplate(mongoClient(), "heroes");
+    public MongoTemplate mongoTemplate(MongoClient mongoClient) {
+        return new MongoTemplate(mongoClient, "heroes");
     }
 
     @Bean(destroyMethod="close")
