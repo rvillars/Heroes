@@ -19,5 +19,6 @@
 |Hystrix Stream    | http://localhost:4444/actuator/hystrix.stream |
 |Hystrix Dashboard | http://locahhost:4444/hystrix |
 |Frontend Service  | http://localhost:8080 |
+|Promote Fight     | http://localhost:8080/promoter/promoteFight |
 
 
