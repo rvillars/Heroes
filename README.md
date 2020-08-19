@@ -8,6 +8,7 @@
 - Added REST controllers for Hero and Party
 - Added additional microservices arena and promoter
 - Added Spring Cloud communication tools
+- Added Spring Cloud Stream and made Promoter<->Arena communication event driven.
 
 ## URLs
 | Service          | URL                   |

@@ -1,7 +1,7 @@
 package ch.bfh.swos.prompter.service.impl;
 
-import ch.bfh.swos.prompter.client.ArenaClient;
 import ch.bfh.swos.prompter.client.CampClient;
+import ch.bfh.swos.prompter.messaging.PromoterSource;
 import ch.bfh.swos.prompter.model.Party;
 import ch.bfh.swos.prompter.service.PromoterService;
 import org.slf4j.Logger;
@@ -21,7 +21,7 @@ public class DefaultPromoterService implements PromoterService {
     private CampClient campClient;
 
     @Autowired
-    private ArenaClient arenaClient;
+    private PromoterSource promoterSource;
 
     @Override
     public String promoteFight() {
@@ -33,9 +33,9 @@ public class DefaultPromoterService implements PromoterService {
         List<Party> challangers = new ArrayList<>();
         challangers.add(challengee);
         challangers.add(challenger);
-        String winner = arenaClient.battle(challangers);
-        LOG.info("And the winner is: Party '"+winner+"'");
 
-        return  winner;
+        promoterSource.sendChallengersToArena(challangers);
+
+        return  "Fight in progress...";
     }
 }
