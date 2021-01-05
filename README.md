@@ -8,4 +8,4 @@
 - Added REST controllers for Hero and Party
 - Added additional microservices arena and promoter
 - Added Spring Cloud communication tools
-- Added Docker configuration and files
+- Added Docker/Kubernetes configuration and files
