@@ -9,3 +9,17 @@
 - Added additional microservices arena and promoter
 - Added Spring Cloud communication tools
 - Added Docker/Kubernetes configuration and files
+
+## URLs
+| Service          | URL                   |
+|----------------- |-----------------------| 
+|Eureka Registry   | http://localhost:1111 |
+|Camp Service      | http://localhost:2222 |
+|Arena Service     | http://localhost:3333 |
+|Promoter Service  | http://localhost:4444 |
+|Hystrix Stream    | http://localhost:4444/actuator/hystrix.stream |
+|Hystrix Dashboard | http://locahhost:4444/hystrix |
+|Frontend Service  | http://localhost:8080 |
+|Promote Fight     | http://localhost:8080/promoter/promoteFight |
+
+
