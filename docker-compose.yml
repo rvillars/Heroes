@@ -2,27 +2,23 @@ version: "3.4"
 services:
   registry:
     build: ./registry
-    networks:
-      - swos
     ports:
       - "1111:1111"
   camp:
     build: ./camp
-    networks:
-      - swos
+    environment:
+      - eureka.client.service-url.defaultZone=http://registry:1111/eureka/
   arena:
     build: ./arena
-    networks:
-      - swos
+    environment:
+      - eureka.client.service-url.defaultZone=http://registry:1111/eureka/
   promoter:
     build: ./promoter
-    networks:
-      - swos
+    environment:
+      - eureka.client.service-url.defaultZone=http://registry:1111/eureka/
   frontend:
     build: ./frontend
-    networks:
-      - swos
+    environment:
+      - eureka.client.service-url.defaultZone=http://registry:1111/eureka/
     ports:
       - "8080:8080"
-networks:
-  swos:
