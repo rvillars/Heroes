@@ -1,7 +1,7 @@
 :: Before running this script, Install Kubectl and Minikube and start it with `minikube start`
 
 :: Rebuild the Spring Boot executable .jar files with maven
-:: mvn clean package -DskipTests=true
+mvn clean package -DskipTests=true
 
 :: Make docker use the minikube docker daemon to build the docker images inside minikube
 @FOR /f "tokens=*" %%i IN ('minikube -p minikube docker-env') DO @%%i
