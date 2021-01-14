@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: promoter-service
+          uri: lb://promoter-service
+          predicates:
+            - Path=/promoter/**

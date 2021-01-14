@@ -2,14 +2,14 @@ package ch.bfh.swos.arena.service.impl;
 
 import ch.bfh.swos.arena.model.Hero;
 import ch.bfh.swos.arena.model.Party;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DefaultBattleServiceRandomTest {
 

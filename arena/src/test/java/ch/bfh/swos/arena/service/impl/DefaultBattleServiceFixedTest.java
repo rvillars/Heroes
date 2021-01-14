@@ -2,12 +2,12 @@ package ch.bfh.swos.arena.service.impl;
 
 import ch.bfh.swos.arena.model.Hero;
 import ch.bfh.swos.arena.model.Party;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DefaultBattleServiceFixedTest {
 
